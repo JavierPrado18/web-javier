@@ -1,0 +1,40 @@
+.timeline-page:after {
+  background-color: #ced4da !important;
+  content: "";
+  height: 95%;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2px;
+}
+@media (min-width: 576px) {
+  .main-icon {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 575px) {
+  .timeline-page {
+    margin-left: 18px;
+  }
+  .timeline-page:after {
+    margin: 0;
+  }
+  .timeline-page .timeline-item .duration {
+    float: left !important;
+    margin: 0 0 30px 15px !important;
+    text-align: left !important;
+  }
+  .timeline-page .timeline-item .duration:after {
+    left: -21px !important;
+  }
+  .timeline-page .timeline-item .duration .event {
+    text-align: left !important;
+    margin-left: 15px;
+  }
+  .timeline-page .timeline-item .event-description-left {
+    text-align: left !important;
+    margin: 0 0 0 15px;
+  }
+}

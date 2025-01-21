@@ -1,0 +1,41 @@
+<br class="mt-5">
+<section class="section py-5" id="resume">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center">
+        <div class="section-title">
+          <div class="position-relative">
+            <h4 class="title text-uppercase mb-4">Resumen</h4>
+            <div>
+              <div class="title-box"></div>
+              <div class="title-line"></div>
+            </div>
+          </div>
+          <p class="text-muted mx-auto para-desc mt-5 mb-0">
+            Mi carrera profecional de todas las etapas de todos mis proyectos.
+          </p>
+        </div>
+      </div>
+      <!--end col-->
+    </div>
+    <!--end row-->
+
+    <div class="row">
+      <div class="col-12">
+        <div class="main-icon rounded-pill text-center mt-4 pt-2">
+          <i data-feather="star" class="fea icon-md-sm"></i>
+        </div>
+        <div class="timeline-page pt-2 position-relative">
+          @for (w of works; track $index) {
+          <div class="timeline-item mt-4">
+            <app-card-work [work]="w"></app-card-work>
+          </div>
+          }
+        </div>
+      </div>
+      <!--end col-->
+    </div>
+    <!--end row-->
+  </div>
+  <!--end container-->
+</section>

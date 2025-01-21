@@ -1,0 +1,84 @@
+<nav
+  id="navbar"
+  class="navbar navbar-expand-lg fixed-top navbar-custom sticky"
+  [ngClass]="(themeService.isDarkMode$ | async) ? 'navbar-dark' : 'navbar-light'"
+  aria-label="Main navigation"
+>
+  <div class="container">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#home">
+      <i>Javier Prado</i>
+    </a>
+
+    <!-- Mobile Controls -->
+    <div class="d-flex align-items-center">
+      <!-- Theme Toggle Mobile -->
+      <button
+        (click)="toggleTheme()"
+        class="btn btn-icon btn-pills btn-primary d-lg-none ms-2"
+        aria-label="Toggle theme"
+      >
+        <i class="fas" [ngClass]="isDarkMode ? 'fa-sun' : 'fa-moon'"></i>
+      </button>
+
+      <!-- Mobile Menu Toggle -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Navigation Content -->
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <!-- Main Navigation -->
+      <ul class="navbar-nav navbar-nav-link mx-auto" >
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">Sobre mi</a></li>
+        <li class="nav-item"><a class="nav-link" href="#resume">Resumen</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#news">Certificados</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact" >Contacto</a></li>
+      </ul>
+
+      <!-- Social Links -->
+      <ul class="list-unstyled mb-0 mt-2 mt-sm-0 social-icon">
+        <li class="list-inline-item m-2">
+          <a
+            href="https://www.linkedin.com/in/javier-prado-12b267323/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn Profile"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a
+            href="https://github.com/JavierPrado18"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub Profile"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Theme Toggle Desktop -->
+      <button
+        (click)="toggleTheme()"
+        class="btn btn-icon btn-pills btn-primary ms-2 d-lg-inline-block d-none"
+        aria-label="Toggle theme"
+      >
+        <i class="fas" [ngClass]="isDarkMode ? 'fa-sun' : 'fa-moon'"></i>
+      </button>
+    </div>
+  </div>
+</nav>

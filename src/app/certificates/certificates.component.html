@@ -1,0 +1,34 @@
+<section
+  class="section py-5"
+  id="news"
+  [ngClass]="(themeService.isDarkMode$ | async) ? 'bg-darki' : 'bg-light'"
+>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center">
+        <div class="section-title">
+          <div class="position-relative">
+            <h4 class="title text-uppercase mb-4">Certificados</h4>
+            <div>
+              <div class="title-box"></div>
+              <div class="title-line"></div>
+            </div>
+          </div>
+          <p class="text-muted mx-auto para-desc mt-5 mb-0">
+            Estos son mis certificados.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      @for (c of certificates; track $index) {
+      <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+        <app-card-certificate [certificate]="c"></app-card-certificate>
+        <!--end blog post-->
+      </div>
+      }
+    </div>
+    <!--end row-->
+  </div>
+</section>

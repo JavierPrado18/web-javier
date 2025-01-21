@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+	<!-- Base -->
+	<path fill="#0072C6" d="M12 20.5v28.6c0 3.8 9 7.4 20 7.4s20-3.6 20-7.4V20.5H12z"/>
+	
+	<!-- Top ellipse -->
+	<ellipse fill="#0072C6" cx="32" cy="20.5" rx="20" ry="7.4"/>
+	
+	<!-- Highlight shapes -->
+	<path fill="#fff" opacity="0.2" d="M32 27.9c11 0 20-3.6 20-7.4s-9-7.4-20-7.4-20 3.6-20 7.4 9 7.4 20 7.4zm0-13.8c9.9 0 18 2.9 18 6.4s-8.1 6.4-18 6.4-18-2.9-18-6.4 8.1-6.4 18-6.4z"/>
+	
+	<!-- Middle rings -->
+	<path fill="#fff" opacity="0.2" d="M12 29.5c0 3.8 9 7.4 20 7.4s20-3.6 20-7.4"/>
+	<path fill="#fff" opacity="0.2" d="M12 38.5c0 3.8 9 7.4 20 7.4s20-3.6 20-7.4"/>
+</svg>

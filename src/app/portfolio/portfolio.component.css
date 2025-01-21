@@ -1,0 +1,14 @@
+.bg-darki {
+  background: #3c4858;
+}
+.portfolioFilter li {
+  transition: all 0.4s ease-in-out;
+  line-height: 30px;
+}
+.portfolioFilter li:hover,
+.portfolioFilter li.active {
+  color: #fff !important;
+  background-color: #e54b4b;
+  cursor: pointer;
+}
+

@@ -1,0 +1,72 @@
+<section
+  class="section py-5"
+  id="projects"
+  [ngClass]="(themeService.isDarkMode$ | async) ? 'bg-darki' : 'bg-light'"
+>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center">
+        <div class="section-title">
+          <div class="position-relative">
+            <h4 class="title text-uppercase mb-4">Mi Portfolio</h4>
+            <div>
+              <div class="title-box"></div>
+              <div class="title-line"></div>
+            </div>
+          </div>
+          <p class="text-muted mx-auto para-desc mt-5 mb-0">
+            Mis proyectos mas relevantes son.
+          </p>
+        </div>
+      </div>
+      <!--end col-->
+    </div>
+    <!--end row-->
+  </div>
+
+  <div class="container">
+    <div class="row mt-4 justify-content-center">
+      <div class="col-12 filters-group-wrap">
+        <div class="filters-group">
+          <ul
+            class="portfolioFilter list-inline mb-0 filter-options text-center"
+          >
+            <li
+              class="list-inline-item categories-name border px-3 rounded active"
+              [class.active]="filterArea === 'all'"
+              (click)="filterProjects('all')"
+            >
+              Todos
+            </li>
+            <li
+              class="list-inline-item categories-name border px-3 rounded"
+              [class.active]="filterArea === 'web'"
+              (click)="filterProjects('web')"
+            >
+              Web
+            </li>
+            <li
+              class="list-inline-item categories-name border px-3 rounded"
+              [class.active]="filterArea === 'mobile'"
+              (click)="filterProjects('mobile')"
+            >
+              Movil
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--end col-->
+    </div>
+
+    <div id="grid" class="row" style="transition: all 5s ease-in-out;">
+      @for (p of projectsFilter; track $index) {
+      <div
+        class="col-lg-4 col-md-6 mt-4 pt-2 picture-item"
+       
+      >
+        <app-card-project [project]="p"></app-card-project>
+      </div>
+      }
+    </div>
+  </div>
+</section>

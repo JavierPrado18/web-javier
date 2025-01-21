@@ -1,0 +1,56 @@
+<section class="bg-home  clip-home" id="home"
+[ngClass]="(themeService.isDarkMode$ | async) ? 'bg-darki' : 'bg-light'"
+>
+  <div class="container">
+    <div class="row mt-5 align-items-center">
+      <div
+        class="col-lg-7 col-md-7 mt-4 pt-2 mt-sm-0 pt-sm-0 order-2 order-md-1"
+      >
+        <div class="title-heading text-center text-md-start">
+          <h1 class="heading mb-3">
+            Soy
+            <span class="typewrite text-primary">{{ currentMessage() }}</span>
+            <span class="cursor text-primary">|</span>
+          </h1>
+          <p class="text-muted h6 font-weight-normal">
+            Hola soy un desarrollador con mas de 1 año de experienca en el desarrollo de software.
+          </p>
+          <div class="mt-4 pt-2">
+            <a
+              href="#about"
+              class="btn btn-primary rounded mb-2 me-2"
+              >Sobre mi</a
+            >
+            <a
+              href="javascript:void(0)"
+              class="btn btn-outline-primary rounded mb-2"
+              >Download CV <i data-feather="download" class="fea icon-sm"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <!--end col-->
+
+      <div class="col-lg-5 col-md-5 order-1 order-md-2">
+        <div class="hero-img">
+          <img
+            src="images/home/hero.jpeg"
+            class="avatar avatar-lg rounded-circle mx-auto d-block shadow-lg img-thumbnail"
+            alt=""
+          />
+        </div>
+      </div>
+      <!--end col-->
+    </div>
+    <!--end row-->
+  </div>
+  <!--end container-->
+  <a
+    href="#about"
+    data-scroll-nav="1"
+    class="mouse-icon rounded-pill bg-transparent mouse-down"
+  >
+    <span class="wheel position-relative d-block mover"></span>
+  </a>
+</section>
+<!--end section-->

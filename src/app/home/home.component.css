@@ -1,0 +1,120 @@
+h1 {
+  margin-top: 0;
+}
+h1 .cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 0.8s step-end infinite;
+  
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.full-home {
+  height: 100vh;
+  background-size: cover;
+  align-self: center;
+  position: relative;
+  background-position: center center;
+}
+.bg-home {
+  padding:150px 0 250px 0;
+  background-size: cover;
+  align-self: center;
+  position: relative;
+  background-position: center center;
+}
+.bg-half {
+  padding: 170px 0;
+  background-size: cover;
+  align-self: center;
+  position: relative;
+  background-position: center center;
+}
+.mouse-icon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 42px;
+  border: 2px solid #495057;
+  bottom: 30px;
+  margin: auto;
+  width: 30px;
+  z-index: 2;
+  box-shadow: 0 0 3px rgba(60, 72, 88, 0.15);
+}
+.mouse-icon.mouse-icon-white {
+  border-color: #f9fafd;
+}
+.bg-darki{
+  background-color: #3c4858;
+}
+.mouse-icon.mouse-icon-white .wheel {
+  background: #f9fafd;
+}
+.mouse-icon .wheel {
+  background: #495057;
+  height: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 30px;
+  width: 2px;
+}
+.mover {
+  animation: mover 1s infinite alternate;
+}
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+.bg-modern {
+  padding: 80px 0 0;
+  background-size: cover;
+  align-self: center;
+  position: relative;
+  background-position: center center;
+}
+.bg-modern.bg-animation-right:after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 70%;
+  height: 100%;
+  background: #e54b4b none repeat scroll 0 0;
+  clip-path: polygon(60% 0, 100% 0, 100% 100%, 35% 100%);
+}
+.clip-home {
+  clip-path: polygon(0 0, 100% 0, 100% 83%, 50% 100%, 0 83%);
+}
+
+@media (max-width: 1024px) {
+  .bg-modern.bg-animation-right:after {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .bg-modern.bg-animation-right:after {
+    width: 60%;
+    clip-path: polygon(80% 0, 100% 0, 100% 100%, 30% 100%);
+  }
+}
+@media (max-width: 767px) {
+  .bg-home,
+  .bg-half {
+    padding: 150px 0;
+    height: auto;
+  }
+  .bg-pages {
+    padding: 150px 0 90px;
+  }
+  .bg-modern.bg-animation-right:after {
+    display: none;
+  }
+}

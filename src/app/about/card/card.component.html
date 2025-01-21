@@ -1,0 +1,12 @@
+<div class="interests-desc  position-relative px-2 py-3 rounded "
+[ngClass]="(themeService.isDarkMode$ | async) ? 'bg-darki ' : 'bg-light'"
+>
+  <div class="hobbies d-flex align-items-center">
+    <div class="text-center rounded-pill ms-1 me-4">
+      <img [src]="tecnology.img" width="32px" alt="" />
+    </div>
+    <div class="content">
+      <h6 class="title mb-0">{{ tecnology.name }}</h6>
+    </div>
+  </div>
+</div>

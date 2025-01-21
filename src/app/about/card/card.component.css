@@ -1,0 +1,21 @@
+.interests-desc {
+    transition: all 0.2s ease;
+  }
+.bg-darki{
+  background: #3c4858;
+}
+  
+  .interests-desc .icon {
+    width: 40px;
+    transition: all 0.2s ease;
+  }
+  .interests-desc .title {
+    font-weight: 500;
+  }
+  .interests-desc:hover {
+    box-shadow: 0 10px 25px rgba(60, 72, 88, 0.15);
+    transform: translateY(-5px);
+  }
+  .interests-desc:hover .icon {
+    color: #e54b4b;
+  }

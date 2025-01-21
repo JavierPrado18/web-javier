@@ -1,0 +1,20 @@
+<div class="blog-post rounded shadow"
+[class]=" (themeService.isDarkMode$ | async) ? 'dark' : '' "
+>
+    <img
+      [src]="certificate.img"
+      class="img-fluid rounded-top"
+      alt=""
+    />
+    <div class="content pt-4 pb-4 p-3"
+    
+    >
+      <h5 class="mb-3">
+        <a href="#" class="title "
+        [class]=" (themeService.isDarkMode$ | async) ? 'text-white' : 'text-dark' "
+          >{{certificate.title}}</a
+        >
+      </h5>
+      
+    </div>
+  </div>
