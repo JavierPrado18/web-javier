@@ -9,8 +9,12 @@
         <div class="title-heading text-center text-md-start">
           <h1 class="heading mb-3">
             Soy
-            <span class="typewrite text-primary">{{ currentMessage() }}</span>
-            <span class="cursor text-primary">|</span>
+            <span class="typewrite "
+            [ngClass]="(themeService.isDarkMode$ | async) ? 'text-info' : 'text-primary'"
+            >{{ currentMessage() }}</span>
+            <span class="cursor "
+            [ngClass]="(themeService.isDarkMode$ | async) ? 'text-info' : 'text-primary'"
+            >|</span>
           </h1>
           <p class="text-muted h6 font-weight-normal">
             Hola soy un desarrollador con mas de 1 año de experienca en el desarrollo de software.
@@ -25,7 +29,8 @@
               href="javiercv.pdf"
               download
               data-feather="download"
-              class="btn btn-outline-primary rounded mb-2"
+              class="btn  rounded mb-2"
+              [ngClass]="(themeService.isDarkMode$ | async) ? 'btn-outline-info' : 'btn-outline-primary'"
               >Descargar CV <i class="fea icon-sm"></i
             ></a>
           </div>

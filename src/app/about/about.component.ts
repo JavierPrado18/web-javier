@@ -1,14 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Tecnology } from '../../models/tecnology';
 import { CardComponent } from './card/card.component';
+import { CommonModule } from '@angular/common';
+import { ThemeService } from '../services/theme.service';
 
 @Component({
   selector: 'app-about',
-  imports: [CardComponent],
+  imports: [CardComponent,CommonModule],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
+  themeservice=inject(ThemeService);
   tecnologies: Tecnology[] = [
     {
       name: 'Angular',
